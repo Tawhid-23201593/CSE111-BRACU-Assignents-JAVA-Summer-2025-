@@ -1,0 +1,57 @@
+//HOMETASK-4 ASSIGNMENT-2 **
+public class Employee 
+{
+  public String name;
+  public double salary=30000.00;
+  public String designation ="junior";
+  
+  public void newEmployee(String newEmpName)
+  {
+    name =newEmpName;
+  }
+  
+  public void displayInfo()
+  {
+    System.out.println("Employee Name: "+name);
+    System.out.println("Employee Salary: "+salary+" TK");
+    System.out.println("Employee Designation: "+designation);
+  }
+  
+  public void calculateTax()
+  {
+    double tax =0.0;
+    if(salary>50000)
+    {
+     System.out.println(name+" Tax Amount: "+salary*(30/100.00)+" TK");
+    }
+    else if(salary>30000)
+    {
+      System.out.println(name+" Tax Amount: "+salary*(10/100.00)+" TK");
+    }
+    else
+    {
+      System.out.println("No need to pay tax");
+    }
+  }
+  public void promoteEmployee(String gg)
+  {
+    if (gg=="senior")
+    {
+      designation= "senior";
+      salary +=25000;
+    }
+    else if(gg=="lead")
+    {
+      designation= "lead";
+      salary +=50000;
+    }
+    else if(gg=="manager")
+    {
+      designation= "manager";
+      salary +=75000;
+    }
+    System.out.println(name+" has been promoted to "+designation);
+    System.out.printf("New Salary: %.2f Tk\n", salary);
+
+  }
+}
