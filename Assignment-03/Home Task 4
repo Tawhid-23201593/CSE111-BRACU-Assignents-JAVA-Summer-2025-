@@ -1,0 +1,51 @@
+//HOMEWORK-3 Task#4
+public class MoneyTracker
+{
+  public String name;
+  public double balance =0.0;
+  public double added = 0.0;
+  public double spent = 0.0;
+   
+  public void createTracker(String nm)
+  {
+    name=nm;
+    balance+=1.0;
+  }
+  public void income(double a)
+  {
+    balance +=a;
+    added=a;
+    System.out.println("Balance Updated!");
+  }
+  public void showHistory()
+  {
+    System.out.println("Last added: "+added);
+    System.out.println("Last spent: "+spent);
+  }
+  
+  public void expense(double b)
+  {
+    if(b>balance)
+    {
+      System.out.println("Not enough balance.");
+    }
+    else if(balance>=b)
+    {
+       balance-=b;
+       spent=b;
+       if(balance==0)
+       {
+         System.out.println("You're broke!");
+       }
+       else
+       {
+         System.out.println("Balance Updated!");
+       }
+    }
+  }
+  public String info()
+  {
+    System.out.println("Name: "+name);
+    return "Current Balance: "+balance;
+  }
+}
