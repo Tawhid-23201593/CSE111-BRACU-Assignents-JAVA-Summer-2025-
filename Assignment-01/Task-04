@@ -1,0 +1,46 @@
+// HomeWork- 4
+
+import java.util.Scanner;
+public class Task4
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("N = ");
+    
+    int numLen = sc.nextInt();
+    int []nums = new int[numLen];
+    for(int count = 0; count<numLen; count++)
+    {
+      nums [count]=sc.nextInt();
+    }
+    
+    for(int num1 =0; num1<numLen; num1++)
+    {
+      boolean checked = false;
+      for(int num2 =0; num2<num1; num2++)
+      {
+        if(nums[num1]==nums[num2])
+        {
+          checked = true;
+          break;
+        }
+      }
+      if (checked)
+      {
+      continue;
+      }
+      
+      int sum =1;
+      for(int a =num1+1; a<numLen; a++)
+      {
+        if(nums[num1]==nums[a])
+        {
+          sum++;         
+        }
+      }
+      System.out.println(nums[num1]+" - "+sum+" times");
+    }
+
+  }
+}
