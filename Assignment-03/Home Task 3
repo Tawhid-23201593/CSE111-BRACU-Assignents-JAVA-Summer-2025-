@@ -1,0 +1,48 @@
+//HOMEWORK-3 Task#3
+public class Reader
+{
+  public String name = "New user";
+  public int capacity = 0;
+  public String []list;
+  public int count =0; 
+    
+    
+  public String createReader(String nm, int capa)
+  {
+    name = nm;
+    capacity = capa;
+    list = new String[capa];
+    return "A new reader is created!";
+  }
+  
+  public void readerInfo()
+  {
+    System.out.println("Name: "+name);
+    System.out.println("Capacity: "+capacity);
+    System.out.println("Books:");
+    if(count!=0)
+    {
+      for(int i=0; i<count;i++)
+      {
+        System.out.println("Book "+(i+1)+": "+list[i]);
+      }
+    }
+    else
+    {
+      System.out.println("No books added yet");
+    }
+  }
+  
+  public void addBook(String ad)
+  {
+    if(count<capacity)
+    {
+      list[count]=ad;
+      count++;
+    }
+    else
+    {
+      System.out.println("No more capacity");
+    }
+  }
+}
