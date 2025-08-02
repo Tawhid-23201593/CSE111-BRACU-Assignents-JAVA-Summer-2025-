@@ -1,0 +1,30 @@
+//HOMEWORK-03 
+
+import java.util.Scanner;
+public class Task3
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the length of the array: ");
+    
+    int numLen = sc.nextInt();
+    int []array = new int[numLen];
+    for(int count = 0; count<numLen; count++)
+    {
+      array [count]=sc.nextInt();
+    }
+    for(int count1 =0; count1<numLen/2; count1++)
+    {
+      int temporary = array[count1];
+      array[count1]= array[numLen-1-count1];
+      array[numLen-1-count1]=temporary;
+    }
+    
+    
+    for(int count2 =0; count2<numLen; count2++)
+    {
+      System.out.print(array[count2]+" ");
+    }
+  }
+}
