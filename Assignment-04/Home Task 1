@@ -1,0 +1,29 @@
+//Assignment_4 Task_1
+
+public class Toy {
+  public String name;
+  public int price;
+  
+  public Toy(String nm, int pr)
+  {
+    name = nm;
+    price = pr;
+    
+    System.out.println("A new toy has been made!");
+  }
+  public void updatePrice(int pr)
+  {
+    price =pr;
+  }
+  public void showPrice()
+  {
+    System.out.printf("price: %d Taka\n",price);
+  }
+  public void updateName(String nm)
+  {
+    System.out.println("Changing old name: "+name);
+    name =nm;
+    System.out.println("new name: "+name);
+  }
+
+}
