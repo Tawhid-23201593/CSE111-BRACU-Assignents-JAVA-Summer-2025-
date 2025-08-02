@@ -1,0 +1,33 @@
+//ASSIGNMENT-3 Task#01
+
+public class Shelf
+{
+  public int capacity = 0;
+  public int books = 0;
+  
+  public void showDetails()
+  {
+    System.out.println("Shelf capacity: "+capacity);
+    System.out.println("Shelf books: "+books);
+  }
+  public void addBooks(int a)
+  {
+    if (capacity!=0)
+    {
+      if(capacity<books+a)
+      {
+        System.out.println("Exceeds capacity");
+      }
+      else
+      {
+        books+=a;
+        System.out.println(a+" books added to shelf");
+      }
+      
+    }
+    else
+    {
+      System.out.println("Zero capacity. Cannot add books.");
+    }
+  }
+}
