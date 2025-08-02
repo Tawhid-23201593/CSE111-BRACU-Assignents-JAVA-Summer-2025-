@@ -1,0 +1,64 @@
+//ASSIGNMENT-3 Task#02
+public class Cart
+{
+  public int cartNum=0;
+  public double price=0.0;
+  public double discount =0.0;
+  public int count =0;
+  String []nameList= new String[3];
+  double [] priceList =new double[3];
+  public void create_cart(int a)
+  { 
+    cartNum=a;
+  }
+  public void giveDiscount(int y)
+  {
+    discount= y;
+    price=  price -(price*(y) / 100.0);
+  }
+  
+  public void addItem(String nm, double pri)
+  {
+    if(count<3)
+    {
+      nameList[count]=nm;
+      priceList[count]=pri;
+      count++;
+      price+=pri;
+       System.out.println(nm+" added to cart "+cartNum+".");
+       System.out.println("You have "+count+" item(s) in your cart now.");
+    }
+    else
+    {
+      System.out.println("You already have 3 items on your cart");
+    }
+  }
+  public void addItem(double pri, String nm)
+  {
+    if(count<3)
+    {
+      nameList[count]=nm;
+      priceList[count]=pri;
+      count++;
+      price+=pri;
+       System.out.println(nm+" added to cart "+cartNum+".");
+       System.out.println("You have "+count+" item(s) in your cart now.");
+    }
+    else
+    {
+      System.out.println("You already have 3 items on your cart");
+    }
+  }
+  
+  public void cartDetails()
+  {
+    System.out.println("Your cart(c"+cartNum+") :");
+    for(int i =0; i<count; i++)
+    {
+      System.out.println(nameList[i]+" - "+priceList[i]);
+    }
+    System.out.println("Discount Applied: "+discount+"%");
+    System.out.println("Total price: "+price);
+  }
+  
+}
