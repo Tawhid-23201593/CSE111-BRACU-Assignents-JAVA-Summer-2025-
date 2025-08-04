@@ -1,0 +1,34 @@
+// Ungraded Task-2 ASS(2)
+
+public class Bird{
+
+  public String name;
+  public String noise;
+  public int fly;
+  
+  public void flyUp(int a){
+    System.out.printf("%s has flown up  %d feet.\n",name,a);
+  }
+  public void flyDown(int a){
+    if(fly<a){
+      System.out.printf("%s cannot fly down  %d feet.\n",name,a);
+    }
+    else if(fly==a){
+      System.out.printf("%s has flown down %d feetand landed.\n",name,a);
+    }
+    else{
+      System.out.printf("%s has flown down %d feet.\n",name,a);
+      fly-=a;
+    }
+  }
+  
+  public void makeNoise(){
+    if(name=="Eagle"){
+      noise="Squee";
+    }
+    else if(name=="Parrot"){
+      noise="Squawk";
+    }
+    System.out.println(noise);
+  }
+}
