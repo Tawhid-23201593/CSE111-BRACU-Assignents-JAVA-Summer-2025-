@@ -1,0 +1,47 @@
+//ungraded Task-2 ASS-3
+
+public class Customer{
+  public String name;
+  public String []item=new String[4];
+  public int []price=new int[4];
+  public int count;
+  public int pri;
+  public void createCustomer(String name){
+    this.name=name;
+  }
+  public void addItem(String inm, int pr){
+    if (count<4){
+      item[count]=inm;
+      price[count]=pr;
+      count++;
+      pri+=pr;
+      System.out.println(inm+" added to cart");
+    }
+    else{
+      System.out.println("Cart is full");
+    }
+  }
+  public void addItem(String a, int b,String c, int d ){
+    if (count<3){
+      item[count]=a;
+      price[count]=b;
+      count++;
+      item[count]=c;
+      price[count]=d;
+      System.out.printf("%s and %s added to cart\n",a,c);
+      count++;
+      pri+=b+d;
+    }
+  }
+  public void showCart(){
+    System.out.println("Customer: "+name);
+    for(int a=0; a<count;a++){
+      System.out.print("Item: "+item[a]);
+      System.out.println(" Price: "+price[a]);
+    }
+  }
+  public void calculatePrice(){
+    System.out.println("Total: "+pri);
+  }
+}
+ 
