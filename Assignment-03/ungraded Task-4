@@ -1,0 +1,32 @@
+//ungraded Task-4 ASS-3
+public class Book{
+  public String title;
+  public String author="unknown";
+  public String genre;
+  public int pages;
+  
+  public void displayDetails(){
+   System.out.printf("Title: %s, Author: %s, Genre: %s, Pages: %d.\n",title,author,genre,pages);
+  }
+  public void createBook(String a){
+   title=a;
+  }
+  public void createBook(String a, String b){
+   title=a;
+   author=b;
+  }
+  public void createBook(String a, String b, String c){
+   title=a;
+   author=b;
+   genre=c;
+  }
+  public void customizeGenre(String a){
+    genre=a;
+    System.out.printf("Updated genre of \"%s\" to %s.\n",title,genre);;
+  }
+  public void customizePages(int a){
+    pages=a;
+    System.out.printf("Updated pages of \"%s\" to %d pages.\n",title,pages);;
+  }
+  
+}
