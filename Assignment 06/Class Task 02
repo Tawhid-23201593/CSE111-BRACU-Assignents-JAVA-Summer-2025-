@@ -1,0 +1,89 @@
+// ass6 task 2 part 2
+public class BracuStudent{
+  String name;
+  private String location;
+  boolean pass= false;
+  
+  public BracuStudent(String a, String b){
+   name=a;
+   location=b;
+  }
+  public void showDetails(){
+    System.out.println("Student Name: "+name);
+    System.out.println("Lives in "+location);
+    System.out.println("Have Bus Pass? "+pass);
+  }
+  public void collectPass(){
+    pass = true;
+  }
+  public void setLocation(String lo){
+    location =lo;
+  }
+  public String getLocation(){
+    return location;
+  }
+}
+// ass6 task 2 part 1
+public class BracuBus{
+  String route;
+  int max;
+  BracuStudent []boardList;
+  int passCount;
+  public BracuBus( String route){
+     this.route= route;
+     boardList=new BracuStudent[2];
+     max=2;
+  }
+  public BracuBus( String route, int passenger){
+    this.route= route;
+    boardList=new BracuStudent[passenger];
+    max= passenger;
+  }
+  public void board(){
+    if(passCount==0){
+      System.out.println("No passengers");
+    }
+    else{
+      System.out.println(passCount+" passengers");
+    }
+  }
+  public void board(BracuStudent a){
+    String loc = a.getLocation();
+    if(loc.equals(route)){
+      if(a.pass==true){
+        if(passCount<max){
+          boardList[passCount]=a;
+          System.out.println(a.name+" boarded the bus.");
+          passCount++;
+        }
+        else{
+           System.out.println("Bus is full!");
+        }
+       }
+      else{
+         System.out.println("You don't have a bus pass!");
+      }
+    }
+    else{
+      System.out.println("You got on the wrong bus!");
+    }
+  }
+  public void board(BracuStudent b, BracuStudent c){
+   board(b);
+   board(c);
+  }
+  public void showDetails(){
+    System.out.println("Bus Route: "+route);
+    System.out.println("Passenger Count: "+passCount+" (Max: "+max+")");
+    System.out.println("Passengers on Board: ");
+    for(int count=0; count<passCount; count++){
+       System.out.print(boardList[count].name);
+       if(count<passCount-1){
+        System.out.print(" ");
+       }
+       else{
+        System.out.println();
+       }
+    }
+  }
+}
