@@ -1,0 +1,20 @@
+//Class task-1 Ass-6
+
+public class Circle{
+  private double radius;
+  
+  public Circle(double a){
+    radius=a;
+  }
+  
+  public void setRadius(double a){
+    radius=a;
+  }
+  public double getRadius(){
+    return radius;
+  }
+  public double area(){
+    double a= Math.PI*(Math.pow(radius,2.0));
+    return a;
+  }
+}
