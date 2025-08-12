@@ -46,3 +46,52 @@ public class Student{
     System.out.println("Student object is created");
   }
 }
+
+// ass 6 class task 3 part 2
+public class Connect{
+  public Student []students= new Student[5];
+  int totalAdvisee=0;
+  
+  public Connect(){
+    System.out.println("Connect is ready to use!");
+  }
+  public void login(Student saddam){
+    boolean status= saddam.getlogin();
+    if (status){
+      System.out.println("Login Successful");
+    }
+    else{
+      System.out.println("Email and password need to be set.");
+    }
+  }
+  public void advising(Student saddam){
+    boolean flag= saddam.getlogin();
+    if(flag){
+      System.out.println("You haven't selected any courses.");
+    }
+    else{
+      System.out.println("Please login to advise courses!");
+    }
+  }
+  public void advising(Student saddam, String a, String b, String c, String d){
+   System.out.println("You need special approval to take more than 3 courses.");
+  }
+  public void advising(Student saddam, String a, String b, String c){
+    if(totalAdvisee<6){
+      saddam.course[0]=a;
+      saddam.course[1]=b;
+      saddam.course[2]=c;
+      System.out.println("Advising successful!");
+      students[totalAdvisee]=saddam;
+      totalAdvisee++;
+    }
+  }
+  public void allAdviseeInfo(){
+    System.out.println("Total Advisee: "+totalAdvisee);
+    for(int count=0; count<totalAdvisee; count++){
+      students[count].AdviseeInfo();
+    }
+    }
+  
+  
+}
