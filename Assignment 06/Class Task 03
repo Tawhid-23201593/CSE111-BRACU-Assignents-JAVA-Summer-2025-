@@ -1,0 +1,48 @@
+// ass 6 class task 3 part 1
+public class Student{
+  String name;
+  String email;
+  int id;
+  String dept;
+  private String password;
+  private boolean login = false;
+  String []course = new String[3];
+  
+  public void AdviseeInfo(){
+   System.out.print("Name: "+name);
+   System.out.println(" ID: "+id);
+   System.out.println("Department: "+dept);
+   System.out.println("Advised Courses:");
+   for(int count=0; count<course.length; count++){
+     System.out.print(course[count]);
+     if(count<course.length-1){
+       System.out.print(" ");
+     }
+     else{
+      System.out.println();
+      System.out.println("==============");
+     }
+   }
+  }
+  public void setPassword(String pass){
+    password=pass;
+    if(email!=null){
+     setlogin();
+    }
+  }
+  public String getPassword(){
+    return password;
+  }
+  public void setlogin(){
+    login=true;
+  }
+  public boolean getlogin(){
+    return login;
+  }
+  public Student(String name, int id, String dept){
+    this.name=name;
+    this.id=id;
+    this.dept=dept;
+    System.out.println("Student object is created");
+  }
+}
