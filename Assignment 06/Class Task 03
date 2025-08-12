@@ -26,15 +26,12 @@ public class Student{
   }
   public void setPassword(String pass){
     password=pass;
-    if(email!=null){
-     setlogin();
-    }
   }
   public String getPassword(){
     return password;
   }
-  public void setlogin(){
-    login=true;
+  public void setlogin(boolean status){
+    login=status;
   }
   public boolean getlogin(){
     return login;
@@ -56,14 +53,14 @@ public class Connect{
     System.out.println("Connect is ready to use!");
   }
   public void login(Student saddam){
-    boolean status= saddam.getlogin();
-    if (status){
-      System.out.println("Login Successful");
-    }
-    else{
-      System.out.println("Email and password need to be set.");
-    }
-  }
+    if (saddam.email == null || saddam.getPassword() == null) {
+        System.out.println("Email and password need to be set.");
+      } 
+   else{
+       saddam.setlogin(true);
+       System.out.println("Login successful");
+      }
+        }
   public void advising(Student saddam){
     boolean flag= saddam.getlogin();
     if(flag){
@@ -77,7 +74,7 @@ public class Connect{
    System.out.println("You need special approval to take more than 3 courses.");
   }
   public void advising(Student saddam, String a, String b, String c){
-    if(totalAdvisee<6){
+    if(saddam.getlogin() && totalAdvisee<5){
       saddam.course[0]=a;
       saddam.course[1]=b;
       saddam.course[2]=c;
