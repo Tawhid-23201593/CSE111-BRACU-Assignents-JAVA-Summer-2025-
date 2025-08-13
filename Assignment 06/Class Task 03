@@ -72,16 +72,29 @@ public class Connect{
     }
   }
   public void advising(Student saddam, String a, String b, String c, String d){
-   System.out.println("You need special approval to take more than 3 courses.");
+String flag= saddam.getlogin();
+    if(flag=="true"){
+      System.out.println("Please login to advise courses!");
+    }
+    else{
+       System.out.println("You need special approval to take more than 3 courses.");
+    }
+  
   }
   public void advising(Student saddam, String a, String b, String c){
-    if(saddam.getlogin()=="true" && totalAdvisee<5){
+    String flag= saddam.getlogin();
+    if(flag=="true"){
+      System.out.println("Please login to advise courses!");
+    }
+    else{
+       if(saddam.getlogin()=="true" && totalAdvisee<5){
       saddam.course[0]=a;
       saddam.course[1]=b;
       saddam.course[2]=c;
       System.out.println("Advising successful!");
       students[totalAdvisee]=saddam;
       totalAdvisee++;
+    }
     }
   }
   public void allAdviseeInfo(){
