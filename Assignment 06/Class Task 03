@@ -46,11 +46,12 @@ public class Student{
 
 // ass 6 class task 3 part 2
 public class Connect{
-  public Student []students= new Student[5];
+  public Student []students;
   int totalAdvisee=0;
   
   public Connect(){
     System.out.println("Connect is ready to use!");
+    students= new Student[5];
   }
   public void login(Student saddam){
     if (saddam.email == null || saddam.getPassword() == null) {
