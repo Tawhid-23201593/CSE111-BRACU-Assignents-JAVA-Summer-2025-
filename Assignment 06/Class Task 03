@@ -73,7 +73,7 @@ public class Connect{
   }
   public void advising(Student saddam, String a, String b, String c, String d){
 String flag= saddam.getlogin();
-    if(flag=="true"){
+    if(flag==null){
       System.out.println("Please login to advise courses!");
     }
     else{
@@ -83,7 +83,7 @@ String flag= saddam.getlogin();
   }
   public void advising(Student saddam, String a, String b, String c){
     String flag= saddam.getlogin();
-    if(flag=="true"){
+    if(flag==null){
       System.out.println("Please login to advise courses!");
     }
     else{
