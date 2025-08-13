@@ -33,7 +33,7 @@ public class Student{
   public void setlogin(String status){
     login=status;
   }
-  public boolean getlogin(){
+  public String getlogin(){
     return login;
   }
   public Student(String name, int id, String dept){
