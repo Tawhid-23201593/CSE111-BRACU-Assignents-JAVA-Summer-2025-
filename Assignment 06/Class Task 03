@@ -5,7 +5,7 @@ public class Student{
   int id;
   String dept;
   private String password;
-  private boolean login = false;
+  private String login;
   String []course = new String[3];
   
   public void AdviseeInfo(){
@@ -30,7 +30,7 @@ public class Student{
   public String getPassword(){
     return password;
   }
-  public void setlogin(boolean status){
+  public void setlogin(String status){
     login=status;
   }
   public boolean getlogin(){
@@ -57,13 +57,13 @@ public class Connect{
         System.out.println("Email and password need to be set.");
       } 
    else{
-       saddam.setlogin(true);
+       saddam.setlogin("true");
        System.out.println("Login successful");
       }
         }
   public void advising(Student saddam){
-    boolean flag= saddam.getlogin();
-    if(flag){
+    String flag= saddam.getlogin();
+    if(flag=="true"){
       System.out.println("You haven't selected any courses.");
     }
     else{
@@ -74,7 +74,7 @@ public class Connect{
    System.out.println("You need special approval to take more than 3 courses.");
   }
   public void advising(Student saddam, String a, String b, String c){
-    if(saddam.getlogin() && totalAdvisee<5){
+    if(saddam.getlogin()=="true" && totalAdvisee<5){
       saddam.course[0]=a;
       saddam.course[1]=b;
       saddam.course[2]=c;
