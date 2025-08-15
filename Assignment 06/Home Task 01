@@ -1,0 +1,46 @@
+//Assignment 6 
+//Homework 1 Assignment 6
+public class Product{
+  private String name= "Unknown";
+  private double price = 0.0;
+  private int quantity;
+  
+  public Product(){
+  }
+  
+  public Product(String nm, double pri){
+    name=nm;
+    price=pri;
+  }
+  public void setName(String a){
+    name=a;
+  }
+  public void setPrice(double a){
+    price =a;
+  }
+  public void setQuantity(int a){
+    quantity=a;
+  }
+  
+  public String getName(){
+    return name;
+  }
+  public double getPrice(){
+    return price;
+  }
+  public int getQuantity(){
+    return quantity;
+  }
+  
+  public void displayInfo(){
+    System.out.println("Product Name: "+name);
+    System.out.println("Price: $"+price);
+  }
+  public void displayInfo(boolean a){
+    if (a){
+      System.out.println("Product Name: "+name);
+      System.out.println("Price: $"+price);
+      System.out.println("Quantity: "+quantity);
+    }
+  }
+}
