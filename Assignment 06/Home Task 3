@@ -47,3 +47,23 @@ public class Department{
     }
   }
 }
+public class Student{
+  private String name;
+  private int id;
+  private double cgpa; 
+  
+  public Student(String nm, int iD, double cg){
+    name=nm;
+    id=iD;
+    cgpa=cg;
+  }
+  
+  public void setId(int a){
+    id=a;
+  }
+  public int getId(){
+    return id;
+  }
+  public String getName(){
+    return name;
+  }
