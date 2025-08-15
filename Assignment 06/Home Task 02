@@ -1,0 +1,88 @@
+//Homework 2 Assignment 6 (Part 1)
+public class Employee{
+  private String name;
+  private int id;
+  private String type;
+  
+  public Employee(){
+    System.out.println("A default employee has been created");
+  }
+  public Employee(String nm, int id, String typ){
+    name=nm;
+    this.id=id;
+    type=typ;
+  }
+  
+  public void setName(String nm){
+    name=nm;
+  }
+  public void setId(int id){
+    this.id= id;
+  }
+  public void setType(String type){
+    this.type=type;
+  }
+  public String getName(){
+    return name;
+  }
+  public int getId(){
+    return id;
+  }
+  public String getType(){
+    return type;
+  }
+}
+
+//(Part 2)
+public class Company{
+  String name ="ABC Company";
+  int count=0;
+  Employee []info =new Employee[3];
+  
+  public void addEmployee(Employee lazy){
+    if(count<info.length){
+      for(int a =0; a<info.length; a++ ){
+      if(info[a]==null){
+        info[a]=lazy;
+        count++;
+        System.out.println(lazy.getName()+" has joined the company");
+        break;
+      }
+    }
+    }
+    else{
+      System.out.println("No more vacancy");
+    }
+    
+  }
+  public void removeEmployee(Employee lazy){
+    for(int a =0; a<info.length; a++ ){
+      if(info[a]==lazy){
+        info[a]=null;
+        count--;
+        System.out.println(lazy.getName()+" has left the company");
+        break;
+      }
+    }
+  }
+  public void details(){
+    System.out.println("Company Name: "+name);
+    System.out.println("Total Employees: "+count);
+    System.out.println("FUlltime Employees");
+    for(int a =0; a<info.length; a++ ){
+      if(info[a]!=null){
+        if(info[a].getType()=="Fulltime"){
+          System.out.println("Name: "+info[a].getName()+", ID:"+info[a].getId());
+        }
+      }
+  }
+    System.out.println("Part-Time Employees:");
+    for(int c =0; c<info.length; c++ ){
+      if(info[c]!=null){
+        if(info[c].getType()=="Part-time"){
+          System.out.println("Name: "+info[c].getName()+", ID:"+info[c].getId());
+        }
+      }
+  }
+}
+}
