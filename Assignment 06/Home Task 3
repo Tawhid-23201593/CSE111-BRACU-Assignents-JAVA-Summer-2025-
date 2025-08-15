@@ -33,3 +33,17 @@ public class Department{
       System.out.println("Student with this ID doesn't exist, Please give a valid ID");
     }
   }
+ public void addStudent(Student a, Student b, Student c){
+    addStudent(a);
+    addStudent(b);
+    addStudent(c);
+  }
+  public void details(){
+    System.out.println("Department Name: "+name);
+    System.out.println("Number of the students: "+ studentCount);
+    System.out.println("Details of the students: ");
+    for(int start= 0; start<studentCount; start++){
+      list[start].det();
+    }
+  }
+}
