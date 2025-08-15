@@ -1,0 +1,35 @@
+public class Department{
+  int studentCount;
+  String name;
+  Student []list =new Student[5];
+  
+  public Department(String nm){
+    name= nm;
+  }
+  
+  public void addStudent(Student saddam){
+     boolean flag= true;
+    for(int count=0; count<studentCount; count++){
+      if(list[count].getId()==saddam.getId()){
+        System.out.println("Welcome to CSE department, "+list[count].getName());
+        flag=false;
+        break;
+      }
+    }
+    if(flag){
+      list[studentCount]=saddam;
+    }
+  }
+  public void  findStudent(int a){
+    boolean flag= true;
+    for(int count=0; count<studentCount; count++){
+      if(list[count].getId()==a){
+        list[count].detFind();
+        flag = false;
+        break;
+      }
+    }
+    if(flag){
+      System.out.println("Student with this ID doesn't exist, Please give a valid ID");
+    }
+  }
