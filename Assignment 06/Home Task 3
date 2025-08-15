@@ -67,3 +67,12 @@ public class Student{
   public String getName(){
     return name;
   }
+ 
+  public void det(){
+    System.out.printf("Student name: %s, ID: %d, cgpa: %.2f\n");
+  }
+  public void detFind(){
+    System.out.println("Student info:");
+    System.out.printf("Student name: %s \nID: %d \ncgpa: %.2f\n");
+  }
+}
