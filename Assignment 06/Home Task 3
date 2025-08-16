@@ -3,8 +3,8 @@ public class Department{
   String name;
   Student []list =new Student[5];
   
-  public Department(String nm){
-    name= nm;
+  public Department(String name){
+    this.name= name;
   }
   
  public void addStudent(Student saddam){
