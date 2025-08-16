@@ -69,10 +69,10 @@ public class Student{
   }
  
   public void det(){
-    System.out.printf("Student name: %s, ID: %d, cgpa: %.2f\n");
+    System.out.printf("Student name: %s, ID: %d, cgpa: %.2f\n",name,id,cgpa);
   }
   public void detFind(){
     System.out.println("Student info:");
-    System.out.printf("Student name: %s \nID: %d \ncgpa: %.2f\n");
+    System.out.printf("Student name: %s \nID: %d \nCGPA: %.2f\n",name,id,cgpa);
   }
 }
