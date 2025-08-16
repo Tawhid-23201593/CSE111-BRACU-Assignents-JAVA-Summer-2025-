@@ -7,17 +7,18 @@ public class Department{
     name= nm;
   }
   
-  public void addStudent(Student saddam){
+ public void addStudent(Student saddam){
      boolean flag= true;
     for(int count=0; count<studentCount; count++){
       if(list[count].getId()==saddam.getId()){
-        System.out.println("Welcome to CSE department, "+list[count].getName());
+        System.out.println("Student with the same ID already exists, Please try with another ID");
         flag=false;
         break;
       }
     }
     if(flag){
-      list[studentCount]=saddam;
+      list[studentCount++]=saddam;
+      System.out.println("Welcome to CSE department, "+saddam.getName());
     }
   }
   public void  findStudent(int a){
