@@ -14,3 +14,28 @@ public class Cargo{
     return name;
   }
 }
+//Assignment 6 Task 4 part 2
+public class Spaceship{
+  public String name;
+  public int capacity;
+  public Cargo [] ca =new Cargo[100];
+  public int countCargo=0;
+  public int cargoWeight=0;
+  
+  public Spaceship(String nm, int cap){
+    capacity=cap;
+    name=nm;
+  }
+  public void loadCargo(Cargo putin){
+    if (countCargo<100){
+      if((putin.getWeight()+cargoWeight)<=capacity){
+       cargoWeight+=putin.getWeight();
+       ca[countCargo++]=putin;
+    }
+      else{
+        String name = putin.getName();
+        int exceed = ( putin.getWeight()+cargoWeight)-capacity;
+        System.out.printf("Warning: Unable to load %s inside %s. Exceeds capacity by %d.\n",name,this.name,exceed);
+    }
+    }
+  }
