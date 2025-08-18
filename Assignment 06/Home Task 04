@@ -39,3 +39,19 @@ public class Spaceship{
     }
     }
   }
+  public void displayDetails(){
+    System.out.println("Spaceship Name: "+name);
+    System.out.println("Capacity: "+capacity);
+    System.out.println("Current Cargo Weight: "+cargoWeight);
+    System.out.print("Cargo:");
+    for(int count=0; count<countCargo; count++){
+      if(count<countCargo-1){
+        System.out.print(ca[count].getName()+" ");
+      }
+      else{
+        System.out.println(ca[count].getName());
+      }
+    }
+  }
+ 
+}
