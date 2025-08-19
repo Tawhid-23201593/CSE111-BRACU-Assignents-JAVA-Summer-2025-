@@ -1,0 +1,38 @@
+// Assignment 7 Task 3
+public class Student{
+  public static int totalStudent=0;
+  public static int cseStudents=0;
+  public static int otherStudent=0;
+  double cgpa=0.0;
+  String name;
+  String department;
+  int id;
+  
+  public Student(String nm, double cg){
+    name=nm;
+    cgpa=cg;
+    department="CSE";
+    totalStudent++;
+    cseStudents++;
+    id=totalStudent;
+  }
+  public Student(String nm, double cg, String dep){
+    name=nm;
+    cgpa=cg;
+    department=dep;;
+    totalStudent++;
+    otherStudent++;
+    id=totalStudent;
+  }
+  public static void printDetails(){
+    System.out.println("Total Student(s): "+totalStudent);
+    System.out.println("CSE Student(s): " +cseStudents);
+    System.out.println("Other Department Student(s):"+otherStudent);
+  }
+  public void individualDetail(){
+    System.out.println("ID: "+id);
+    System.out.println("Name: "+name);
+    System.out.println("CGPA: "+cgpa);
+    System.out.println("Department: "+department);
+  }
+}
