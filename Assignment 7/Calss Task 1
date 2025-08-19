@@ -1,0 +1,22 @@
+// Assignment 7 task 1
+
+public class Passenger{
+  public static int no_of_passenger=0;
+  public static double total_fare=0.0;
+  public double fare;
+  public String name;
+  public Passenger(String nm, double d){
+    name=nm;
+    fare+=(d*20);
+    total_fare+=fare;
+    no_of_passenger++;
+  }
+  public void storeBaggageWeight(double e){
+    fare+=(e*10);
+    total_fare+=(e*10);
+  }
+  public void passengerDetails(){
+    System.out.println("Name: "+name);
+    System.out.println("Fare: "+fare+" TK");
+  }
+}
