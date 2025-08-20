@@ -1,0 +1,28 @@
+//HomeTask-1 
+public class Travel{
+   private static int count=0;
+   private String source;
+   private String des;
+   private int time=1;
+   
+   public Travel(String so, String de){
+     source=so;
+     des=de;
+     count++;
+   }
+   public void setTime(int a){
+     time=a;
+   }
+   public void setDestination(String a){
+     des=a;
+   }
+   public void setSource(String a){
+     source=a;
+   }
+   public static int getCount(){
+     return count;
+   }
+   public String displayTravelInfo(){
+     return "Source: "+source+"\nDestanition: "+des+"\nFlight Time: "+time+":00";
+   }
+}
