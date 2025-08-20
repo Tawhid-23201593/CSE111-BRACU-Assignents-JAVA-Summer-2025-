@@ -1,0 +1,36 @@
+//HomeTask-1 
+public class Player{
+   public static int total=0;
+   public static String []nameList= new String[11];
+   String name;
+   String country;
+   int jNum;
+   
+   public Player(String nm, String coun, int num){
+     name=nm;
+     country=coun;
+     jNum=num;
+     if(total<11){
+       nameList[total++]=name;
+     }
+   }
+   public String player_detail(){
+     return("Player Name: "+name+"\nJersey Number: "+jNum+"\nCountry: "+country+"\n");
+   }
+   public static void info(){
+     System.out.println("Total number of players: "+total);
+     System.out.print("Players enlisted so far: ");
+     for(int check=0; check<total; check++){
+       if(nameList[check]!=null){
+         System.out.print(nameList[check]);
+         if(check<total-1){
+           System.out.print(", ");
+         }
+         else{
+           System.out.println();
+         }
+       }
+       
+     }
+   }
+}
