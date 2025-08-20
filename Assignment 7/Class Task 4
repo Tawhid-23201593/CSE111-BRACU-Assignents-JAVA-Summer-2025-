@@ -1,0 +1,65 @@
+public class Borrower{
+    String name;
+    public static int book_count[] = {3, 3, 3};
+    public static String book_name[] = {"Pather Panchali", "Durgesh Nandini", "Anandmath"};
+    public String []list= new String[3];
+    int listCount=0;
+    public Borrower(String name){
+       this.name=name;
+    }
+    public void borrowBook(String name){
+        if(listCount<3){
+         for(int count=0; count<3; count++){
+             if(book_name[count]==name){
+                 if(book_count[count]>0){
+                     list[listCount++]= name;
+                     book_count[count]--;
+                 }
+                 else{
+                     System.out.println("This book is not available.");
+                 }
+                 break;
+             }
+         }
+        }
+     }
+    public static int remainingBooks(String nm){
+         int a=0;
+        for(int check=0; check<3; check++){
+           
+            if(book_name[check]==nm){
+                a= book_count[check] ;
+                break;
+            }
+            
+        }
+     return a;   
+    }
+    public static void bookStatus(){
+        System.out.println("Available Books: ");
+        for(int count=0; count<3; count++){
+            System.out.println(book_name[count]+": "+book_count[count]);
+        }
+    }
+    public void borrowerDetails(){
+        System.out.println("Name: "+name);
+        System.out.println("Books Borrowed: ");
+        for(int count=0; count<3; count++){
+            if(list[count]!=null){
+                System.out.println(list[count]);
+            }
+        }
+    }
+     
+}  
+
+
+
+
+
+
+
+
+
+
+
