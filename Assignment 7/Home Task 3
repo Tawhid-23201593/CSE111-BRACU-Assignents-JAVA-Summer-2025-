@@ -1,0 +1,39 @@
+public class Cargo{
+  public static double capacity=10.0; 
+  public static int count=0;
+  int id=0;
+  String contents;
+  double weight=0.0;
+  boolean stat=false;
+  public Cargo(String con, double we){
+    contents=con;
+    weight=we;
+    count++;
+    id=count;
+  }
+  public static double capacity(){
+    return capacity;
+  }
+  public void details(){
+    System.out.println("Cargo ID: "+id+", Contents: "+contents+", Weight: "+weight+", Loaded: "+stat);
+  }
+  public void load(){
+    if(!stat){
+      if(weight>capacity){
+      System.out.println("Cannot load cargo, exceeds weight capacity.");
+    }
+    else{
+      capacity=capacity-weight;
+      System.out.println("Cargo "+id+" loaded for transport.");
+      stat=true;
+    }
+    }
+  }
+  public void unload(){
+    if (stat){
+      capacity+=weight;
+    System.out.println("Cargo "+id+" unloaded.");
+    stat=false;
+    }
+  }
+}
