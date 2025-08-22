@@ -1,4 +1,4 @@
-//HomeTask-1 
+//HomeTask-2
 public class Travel{
    private static int count=0;
    private String source;
