@@ -1,4 +1,4 @@
-//ungraded Task-3 ASS-3
+//Ungraded Task-3 ASS-3
 public class Calculator{
   
   public void add(int a, int b){
