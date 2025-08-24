@@ -1,4 +1,4 @@
-//Ungraded Task-2 ASS-3
+// Ungraded Task-2 ASS-3
 public class Customer{
   public String name;
   public String []item=new String[4];
