@@ -1,4 +1,4 @@
-//Assignment_4 Task_3
+//Assignment_4 Task 3
 public class Triangle{
   public String type;
   public int a;
