@@ -4,7 +4,7 @@ public class Customer{
   public String []item=new String[4]; 
   public int []price=new int[4];
   public int count;
-  public int pri;
+  public int pri; 
   public void createCustomer(String name){
     this.name=name;
   }
