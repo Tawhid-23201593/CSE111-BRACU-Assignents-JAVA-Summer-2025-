@@ -1,7 +1,7 @@
 // Ungraded Task-2 ASS-3 
 public class Customer{ 
   public String name;
-  public String []item=new String[4];
+  public String []item=new String[4]; 
   public int []price=new int[4];
   public int count;
   public int pri;
