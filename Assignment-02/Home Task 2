@@ -4,7 +4,7 @@ public class ImaginaryNumber
   int realPart =0;
   int imaginaryPart=0; 
   
-  public String printNumber()
+  public String printNumber() 
   {
     String s = realPart+" + "+imaginaryPart+"i";
     return s;
