@@ -4,7 +4,7 @@ Public class Song{
   int length; 
   public song(String a, String b, int c){
      name=a;
-     artist=b; 
+     artist=b;  
      length=c;
   }
   public void songInfo(){
