@@ -1,0 +1,10 @@
+public class Dog extends Animal{
+  String name;
+  
+  public String getName(){
+    return name;
+  }
+  public void updateSound(String so){
+    sound=so;
+  }
+}
