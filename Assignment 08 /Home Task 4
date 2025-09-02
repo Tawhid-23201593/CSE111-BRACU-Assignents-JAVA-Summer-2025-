@@ -1,0 +1,30 @@
+
+//Task 4
+public class CSEStudent extends Student{
+  public static int studentCount=0;
+  String []available = new String []{"CSE110","CSE111","CSE220","CSE221"};
+
+  public static void details(){
+    System.out.println("Total CSE Students: "+studentCount);
+    System.out.println("Available Lab Based Courses:  \nCSE110 CSE111 CSE220 CSE221");
+  }
+  public CSEStudent(String nm, int id){
+    super(nm, id);
+    studentCount++;
+  }
+  public void addLabBasedCourse(String a){
+      boolean flag = false;
+    for (String c : available) {
+      if (c.equals(a)) {
+        flag = true;
+        if (!courses.contains(a)) {
+          courses += a + " ";
+        }
+        break;
+      }
+    }
+    if (!flag) {
+      System.out.println("It is not a lab based course!");
+    }
+  }
+}
