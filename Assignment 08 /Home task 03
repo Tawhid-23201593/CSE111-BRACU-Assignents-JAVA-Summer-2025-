@@ -1,0 +1,31 @@
+// task 3
+public class Book extends Product{
+    String isbn;
+    String publisher;
+    
+  public Book(int id, String title, int price, String isbn, String publisher){
+    super(id, title, price);
+    this.isbn=isbn;
+    this.publisher=publisher;
+  }
+  public String printDetail(){
+    String a= getIdTitlePrice();
+    return a+"\nISBN: "+isbn+" Publisher: "+publisher;
+  }
+}
+
+public class CD extends Product{
+    int duration;
+    String band;
+    String genre;
+  public CD(int id, String title, int price, String band, int duration, String genre){
+    super(id, title, price);
+    this.duration=duration;
+    this.band=band;
+    this.genre=genre;
+  }
+  public String printDetail(){
+    String a= getIdTitlePrice();
+    return a+"\nBand: "+band+" Duration: "+duration+" minutes \nGenre"+genre;
+  }
+}
