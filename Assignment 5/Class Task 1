@@ -5,7 +5,7 @@ Public class Song{
   public song(String a, String b, int c){ 
      name=a; 
      artist=b;   
-     length=c;
+     length=c; 
   }
   public void songInfo(){
     System.out.println("Title: "+name+", Artist: "+artist+", Lenght: "+length+" minutes");
