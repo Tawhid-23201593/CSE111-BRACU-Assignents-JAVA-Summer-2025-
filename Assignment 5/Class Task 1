@@ -2,7 +2,7 @@ Public class Song{
   String name;
   String artist;
   int length;  
-  public song(String a, String b, int c){
+  public song(String a, String b, int c){ 
      name=a; 
      artist=b;  
      length=c;
