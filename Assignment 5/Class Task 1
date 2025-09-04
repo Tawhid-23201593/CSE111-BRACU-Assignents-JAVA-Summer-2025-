@@ -9,5 +9,5 @@ Public class Song{
   }
   public void songInfo(){
     System.out.println("Title: "+name+", Artist: "+artist+", Lenght: "+length+" minutes");
-  }
+  } 
 }
