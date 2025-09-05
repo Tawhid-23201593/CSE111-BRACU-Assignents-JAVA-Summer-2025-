@@ -3,7 +3,7 @@ public class CheckingAccount extends Account{
   
   public CheckingAccount(double a){
   super(a);
-  count++;
+  count++; 
   } 
   public CheckingAccount(){
   super(0.0);
