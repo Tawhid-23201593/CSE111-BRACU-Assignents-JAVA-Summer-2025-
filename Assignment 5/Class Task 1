@@ -6,7 +6,8 @@
      name=a;  
      artist=b;   
      length=c; 
-  }
+  } 
+
   public void songInfo(){
     System.out.println("Title: "+name+", Artist: "+artist+", Lenght: "+length+" minutes");
   } 
