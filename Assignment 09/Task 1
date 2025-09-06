@@ -1,7 +1,7 @@
 // Task 1
 
 public class Manager extends Employee{
-  public double bonus;
+  public double bonus; 
   public double finalSalary;
   
   public Manager(String nm, double base, int hour, double bo){
@@ -48,3 +48,9 @@ public class Developer extends Employee{
       finalSalary=(a+700);
     }
   }
+  public void displayInfo(){
+    super.displayInfo();
+    System.out.println("Language: "+language);
+    System.out.println("finalSalary: $"+finalSalary);
+  }
+}
