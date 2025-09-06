@@ -1,0 +1,46 @@
+
+//task 2
+public class KKTea extends Tea{
+  public int weight;
+  public int bags;
+  public static int total=0;
+  public static int reg=0;
+  public static int flv=0;
+  public KKTea(int pr, int ba){
+    super("KK Regular Tea", pr);
+    bags = ba;
+    weight = ba * 2;
+   }
+  public KKTea(String nm, int pr, int ba) {
+    super("KK " + nm + " Tea", pr);
+    bags = ba;
+    weight = ba * 2;
+   }
+  public static void totalSales(){
+    System.out.println("Total Sales: "+total);
+    System.out.println("KK Regular Tea: "+reg);
+    if(flv!=0){
+      System.out.println("KK Flavoured Tea: "+flv);
+    }
+  }
+  public static void updateSoldStatusRegular(KKTea a){
+     a.status=true;
+     total++;
+     reg++;
+  }
+  public void productDetail(){
+     super.productDetail();
+     System.out.print("Weight: "+weight);
+     System.out.println(", Tea Bags: "+bags);
+  }
+}
+public class KKFlavouredTea extends KKTea{
+   public KKFlavouredTea(String nm, int pr, int ba) {
+     super(nm, pr, ba);
+ }
+  public static void updateSoldStatusFlavoured(KKFlavouredTea a){
+     a.status=true;
+     total++;
+     flv++;
+     }
+}
