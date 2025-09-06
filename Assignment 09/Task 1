@@ -1,0 +1,19 @@
+// Task 1
+
+public class Manager extends Employee{
+  public double bonus;
+  public double finalSalary;
+  
+  public Manager(String nm, double base, int hour, double bo){
+    super(nm, base, hour);
+    bonus=bo;
+  }
+  public void calculateSalary(){
+    double a=getBaseSalary();
+    finalSalary=a*(bonus/100.0);
+  }
+  public void displayInfo(){
+    super.displayInfo();
+    System.out.println("Bonus: "+bonus+" %");
+    System.out.println("finalSalary: $"+finalSalary);
+  }
