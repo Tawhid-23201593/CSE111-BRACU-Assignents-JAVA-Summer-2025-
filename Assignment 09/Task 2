@@ -1,5 +1,5 @@
  
-//task 2
+//task 2 
 public class KKTea extends Tea{
   public int weight;
   public int bags;
