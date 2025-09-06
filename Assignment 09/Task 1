@@ -33,3 +33,18 @@ public class Manager extends Employee{
     }
     }
   }
+
+public class Developer extends Employee{
+  public String language;
+  public double finalSalary;
+  
+  public Developer(String nm, double salary, int workHour, String lag){
+    super(nm,salary,workHour);
+    language=lag;
+  }
+  public void calculateSalary(){
+    double a=getBaseSalary();
+    if(language.equals("Java")){
+      finalSalary=(a+700);
+    }
+  }
