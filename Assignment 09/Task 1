@@ -17,3 +17,19 @@ public class Manager extends Employee{
     System.out.println("Bonus: "+bonus+" %");
     System.out.println("finalSalary: $"+finalSalary);
   }
+ public void requestIncrement(double am){
+    if(getHoursWorked()>100){
+       double salary = getBaseSalary()+am;
+       setBaseSalary(salary);
+       System.out.println("$"+am+" Increment approved.");
+    }
+    else if (getHoursWorked()>80){
+       double salary = getBaseSalary()+am/2;
+       setBaseSalary(salary);
+       System.out.println("$"+(am/2)+" Increment approved.");
+    }
+    else{
+      System.out.println("Increment denied.");
+    }
+    }
+  }
