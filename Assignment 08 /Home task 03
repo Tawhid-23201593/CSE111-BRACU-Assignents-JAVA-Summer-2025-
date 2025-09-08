@@ -1,7 +1,7 @@
 // task 3
 public class Book extends Product{
     String isbn;
-    String publisher;
+    String publisher; 
     
   public Book(int id, String title, int price, String isbn, String publisher){
     super(id, title, price);
