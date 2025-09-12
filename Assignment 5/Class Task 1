@@ -1,4 +1,5 @@
-     Public class Song{
+
+Public class Song{
   String name;
   String artist;
   int length;    
