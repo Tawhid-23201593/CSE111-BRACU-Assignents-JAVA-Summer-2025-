@@ -1,6 +1,6 @@
 //ASSIGNMENT-3 Task#01
 
-public class Shelf
+public class Shelf 
 {
   public int capacity = 0;
   public int books = 0;
