@@ -10,7 +10,7 @@ public class CSEStudent extends Student{
   }
   public CSEStudent(String nm, int id){
     super(nm, id);
-    studentCount++;
+    studentCount++1;
   }
   public void addLabBasedCourse(String a){
       boolean flag = false;
