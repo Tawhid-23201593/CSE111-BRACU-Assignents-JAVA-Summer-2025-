@@ -1,5 +1,4 @@
-
-//Task 4
+//Task 4 
 public class CSEStudent extends Student{
   public static int studentCount=0;
   String []available = new String []{"CSE110","CSE111","CSE220","CSE221"};
@@ -17,7 +16,7 @@ public class CSEStudent extends Student{
     for (String c : available) {
       if (c.equals(a)) {
         flag = true;
-        if (!courses.contains(a)) {
+        if (courses.contains(a)=false) {
           courses += a + " ";
         }
         break;
