@@ -16,13 +16,13 @@ public class CSEStudent extends Student{
     for (String c : available) {
       if (c.equals(a)) {
         flag = true;
-        if (courses.contains(a)=false) {
+        if (courses.contains(a)==false) {
           courses += a + " ";
         }
         break;
       }
     }
-    if (!flag) {
+    if (flag==false) {
       System.out.println("It is not a lab based course!");
     }
   }
